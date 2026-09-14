@@ -89,3 +89,30 @@ document.querySelectorAll('.reel').forEach((reel) => {
   }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
   els.forEach(function(el){ io.observe(el); });
 })();
+
+
+document.querySelectorAll('.testimonial-video-wrap').forEach((wrap) => {
+  const video = wrap.querySelector('.testimonial-video');
+  const playBtn = wrap.querySelector('.testimonial-play');
+  const stopBtn = wrap.querySelector('.testimonial-stop');
+
+  playBtn.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+      playBtn.textContent = 'Pause';
+    } else {
+      video.pause();
+      playBtn.textContent = 'Play';
+    }
+  });
+
+  stopBtn.addEventListener('click', () => {
+    video.pause();
+    video.currentTime = 0;
+    playBtn.textContent = 'Play';
+  });
+
+  video.addEventListener('ended', () => {
+    playBtn.textContent = 'Play';
+  });
+});

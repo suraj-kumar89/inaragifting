@@ -71,9 +71,19 @@ figure{margin:0;}
 .trusted{padding:clamp(2.6rem,4vw,3.6rem) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
 .trusted-line{font-family:var(--serif);font-size:1.24rem;text-align:center;color:var(--soft);margin:0 auto 2rem;}
 .logo-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(2rem,6vw,4.5rem);}
-.logo-slot{height:44px;display:flex;align-items:center;justify-content:center;padding:0 .5rem;
-  font-family:var(--serif);font-size:clamp(1rem,1.9vw,1.32rem);letter-spacing:.15em;color:#867E72;}
-.logo-slot img{max-height:44px;width:auto;opacity:.8;}
+.logo-slot{height:62px;display:flex;align-items:center;justify-content:center;padding:0 .4rem;}
+.logo-slot img{width:auto;height:auto;opacity:1;}
+.lg-oberoi{max-height:54px;max-width:170px;}
+.lg-chanakya{max-height:58px;max-width:120px;}
+.lg-dlf{max-height:54px;max-width:120px;}
+.lg-amaris{max-height:30px;max-width:180px;}
+@media (max-width:760px){
+  .logo-row{gap:2rem 2.4rem;}
+  .lg-oberoi{max-height:44px;max-width:138px;}
+  .lg-chanakya{max-height:48px;}
+  .lg-dlf{max-height:44px;}
+  .lg-amaris{max-height:24px;max-width:146px;}
+}
 
 .head{max-width:54ch;margin-bottom:clamp(2.4rem,5vw,3.6rem);}
 .head.mid{margin-inline:auto;text-align:center;}
@@ -323,4 +333,372 @@ form .btn{grid-column:1/-1;justify-self:start;}
   form{grid-template-columns:1fr;}
   .bar{display:grid;}
   .footer{padding-bottom:5.5rem;}
+}
+.testimonial-video-wrap{
+  position:relative;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:#000;
+}
+
+.testimonial-video{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.testimonial-video-controls{
+  position:absolute;
+  left:50%;
+  bottom:20px;
+  transform:translateX(-50%);
+  display:flex;
+  gap:10px;
+  z-index:2;
+}
+
+.testimonial-video-controls button{
+  border:1px solid rgba(255,255,255,.5);
+  background:rgba(20,71,82,.9);
+  color:#fff;
+  padding:9px 18px;
+  font-family:var(--sans);
+  font-size:.72rem;
+  letter-spacing:.08em;
+  cursor:pointer;
+}
+
+.testimonial-video-controls button:hover{
+  background:var(--teal);
+}
+
+/* =========================================================
+   INARA RITUALS — HUBSPOT FORM
+   ========================================================= */
+
+.hubspot-form-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+}
+
+/* HubSpot form container */
+.hubspot-form-wrap .hs-form-frame {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   FORM LAYOUT
+   ========================================================= */
+
+.hubspot-form-wrap form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.35rem 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+
+/* =========================================================
+   FIELD WRAPPER
+   ========================================================= */
+
+.hubspot-form-wrap .hs-form-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FULL-WIDTH FIELDS
+   ========================================================= */
+
+/* Date and textarea can span full width */
+.hubspot-form-wrap .hs-fieldtype-date,
+.hubspot-form-wrap .hs-fieldtype-textarea {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.hubspot-form-wrap label {
+  display: block;
+  margin: 0 0 .5rem;
+  padding: 0;
+
+  font-family: var(--sans);
+  font-size: .73rem;
+  font-weight: 500;
+  letter-spacing: .07em;
+  line-height: 1.4;
+  color: #9FB8B8;
+}
+
+
+/* Required asterisk */
+.hubspot-form-wrap .hs-form-required {
+  color: var(--lime);
+  margin-left: .15rem;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.hubspot-form-wrap input[type="text"],
+.hubspot-form-wrap input[type="email"],
+.hubspot-form-wrap input[type="tel"],
+.hubspot-form-wrap input[type="date"],
+.hubspot-form-wrap select,
+.hubspot-form-wrap textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  font-family: var(--sans);
+  font-size: .92rem;
+  font-weight: 300;
+  line-height: 1.5;
+
+  color: #F1F6F5;
+  background: transparent;
+
+  border: 0;
+  border-bottom: 1px solid #47818A;
+  border-radius: 0;
+
+  padding: .65rem 0 .7rem;
+
+  outline: none;
+
+  transition:
+    border-color .25s ease,
+    color .25s ease;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.hubspot-form-wrap input::placeholder,
+.hubspot-form-wrap textarea::placeholder {
+  color: #9FB8B8;
+  opacity: .7;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.hubspot-form-wrap input:focus,
+.hubspot-form-wrap select:focus,
+.hubspot-form-wrap textarea:focus {
+  outline: none;
+  border-bottom-color: var(--lime);
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.hubspot-form-wrap select {
+  appearance: none;
+  -webkit-appearance: none;
+
+  cursor: pointer;
+
+  background-color: transparent;
+
+  padding-right: 1.5rem;
+}
+
+.hubspot-form-wrap select option {
+  background: var(--teal);
+  color: #F1F6F5;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.hubspot-form-wrap textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+
+/* =========================================================
+   FIELD SPACING
+   ========================================================= */
+
+.hubspot-form-wrap .hs-form-field > label {
+  margin-bottom: .45rem;
+}
+
+
+/* =========================================================
+   HELP / DESCRIPTION TEXT
+   ========================================================= */
+
+.hubspot-form-wrap .hs-field-desc {
+  margin-top: .35rem;
+
+  font-family: var(--sans);
+  font-size: .7rem;
+  line-height: 1.5;
+
+  color: #9FB8B8;
+}
+
+
+/* =========================================================
+   ERROR MESSAGES
+   ========================================================= */
+
+.hubspot-form-wrap .hs-error-msgs {
+  margin: .45rem 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.hubspot-form-wrap .hs-error-msgs li {
+  margin: 0;
+
+  font-family: var(--sans);
+  font-size: .7rem;
+  line-height: 1.4;
+
+  color: #F4B6B6;
+}
+
+.hubspot-form-wrap .hs-error-msg {
+  color: #F4B6B6;
+}
+
+
+/* =========================================================
+   SUBMIT AREA
+   ========================================================= */
+
+.hubspot-form-wrap .hs-submit {
+  grid-column: 1 / -1;
+  margin-top: .25rem;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.hubspot-form-wrap input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+
+  border: 0;
+  border-radius: 0;
+
+  background: var(--pink);
+  color: #FFF;
+
+  padding: .9rem 1.6rem;
+
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background .25s ease,
+    transform .25s ease;
+}
+
+.hubspot-form-wrap input[type="submit"]:hover {
+  background: var(--teal-deep);
+  transform: translateY(-1px);
+}
+
+.hubspot-form-wrap input[type="submit"]:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   PRIVACY / FORM LEGAL TEXT
+   ========================================================= */
+
+.hubspot-form-wrap .legal-consent-container,
+.hubspot-form-wrap .hs-richtext {
+  grid-column: 1 / -1;
+
+  font-family: var(--sans);
+  font-size: .7rem;
+  line-height: 1.6;
+
+  color: #9FB8B8;
+}
+
+
+/* =========================================================
+   FORM SUBMISSION MESSAGE
+   ========================================================= */
+
+.hubspot-form-wrap .submitted-message {
+  padding: 2rem 0;
+
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  line-height: 1.5;
+
+  color: #F1F6F5;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .hubspot-form-wrap {
+    margin-top: 2.5rem;
+  }
+
+  .hubspot-form-wrap form {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .hubspot-form-wrap .hs-fieldtype-date,
+  .hubspot-form-wrap .hs-fieldtype-textarea,
+  .hubspot-form-wrap .hs-submit,
+  .hubspot-form-wrap .legal-consent-container,
+  .hubspot-form-wrap .hs-richtext {
+    grid-column: 1;
+  }
+
+  .hubspot-form-wrap input[type="submit"] {
+    width: 100%;
+  }
 }
