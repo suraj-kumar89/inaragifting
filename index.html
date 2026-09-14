@@ -430,30 +430,73 @@
 
 <section class="section on-teal" id="start">
   <div class="wrap">
+
     <div class="head reveal">
       <h2>Start the conversation</h2>
-      <p>Whichever way suits you. We reply within one working day, and orders for Diwali delivery close on 15 October.</p>
+      <p>
+        Whichever way suits you. We reply within one working day,
+        and orders for Diwali delivery close on 15 October.
+      </p>
     </div>
 
     <div class="ways reveal">
+
       <div class="way">
         <h3>Message us</h3>
-        <p>Fastest route. Send the quantity and date and we quote on WhatsApp.</p>
-        <a class="btn btn-pink" href="https://wa.me/919810979086" rel="noopener">Open WhatsApp</a>
+        <p>
+          Fastest route. Send the quantity and date and we quote on WhatsApp.
+        </p>
+
+        <a
+          class="btn btn-pink"
+          href="https://wa.me/919810979086"
+          target="_blank"
+          rel="noopener"
+        >
+          Open WhatsApp
+        </a>
       </div>
+
+
       <div class="way">
         <h3>Book a call</h3>
-        <p>Fifteen minutes to settle the right set, quantity and branding.</p>
-        <a class="btn btn-line" href="https://calendly.com/inquiries-inararituals/30min" rel="noopener">Pick a time</a>
+        <p>
+          Fifteen minutes to settle the right set, quantity and branding.
+        </p>
+
+        <a
+          class="btn btn-line"
+          href="/book-a-call"
+        >
+          Pick a time
+        </a>
       </div>
+
+
       <div class="way">
         <h3>Send a brief</h3>
-        <p>Fill the form and we come back with a quote and a sample plan.</p>
-        <a class="btn btn-line" href="#brief">Use the form</a>
+        <p>
+          Fill the form and we come back with a quote and a sample plan.
+        </p>
+
+        <a
+          class="btn btn-line"
+          href="#brief"
+        >
+          Use the form
+        </a>
       </div>
+
     </div>
 
-   <form id="brief" action="#" method="post" novalidate>
+
+    <!-- INARA RITUALS CUSTOM HTML FORM -->
+   <form
+  id="brief"
+  action="/api/submit-enquiry"
+  method="POST"
+  novalidate
+>
 
   <div class="field">
     <label for="name">Your name</label>
@@ -501,14 +544,17 @@
 
   <div class="field">
     <label for="qty">Quantity</label>
-
-    <select id="qty" name="quantity" required>
+    <select
+      id="qty"
+      name="quantity"
+      required
+    >
       <option value="">Select</option>
-      <option>Under 100 boxes</option>
-      <option>100 to 250 boxes</option>
-      <option>250 to 500 boxes</option>
-      <option>500 to 1,000 boxes</option>
-      <option>Over 1,000 boxes</option>
+      <option value="Under 100 boxes">Under 100 boxes</option>
+      <option value="100 to 250 boxes">100 to 250 boxes</option>
+      <option value="250 to 500 boxes">250 to 500 boxes</option>
+      <option value="500 to 1,000 boxes">500 to 1,000 boxes</option>
+      <option value="Over 1,000 boxes">Over 1,000 boxes</option>
     </select>
   </div>
 
@@ -518,6 +564,7 @@
       id="city"
       name="city"
       type="text"
+      autocomplete="address-level2"
       required
     >
   </div>
@@ -541,9 +588,11 @@
     ></textarea>
   </div>
 
-  <button class="btn btn-pink" type="submit">
-    Send enquiry
-  </button>
+  <input
+    type="submit"
+    class="btn btn-pink"
+    value="Send enquiry"
+  >
 
   <p class="form-note">
     We reply within one working day. Your details are not shared.
@@ -551,21 +600,6 @@
 
 </form>
 
-<div id="brief" class="hubspot-form-wrap reveal">
-
-  <script
-    src="https://js-na2.hsforms.net/forms/embed/247389613.js"
-    defer>
-  </script>
-
-  <div
-    class="hs-form-frame"
-    data-region="na2"
-    data-form-id="73054849-9223-4171-bd91-dfa3fd69bafc"
-    data-portal-id="247389613">
-  </div>
-
-</div>
   </div>
 </section>
 
