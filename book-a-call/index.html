@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Book a Call | Inara Rituals</title>
+
+    <meta name="description"
+        content="Book a call with Inara Rituals to discuss thoughtful, premium corporate gifting for your next occasion.">
+         <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event:'gtm.js'
+      });
+
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+
+      j.async=true;
+      j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WR4KVQP7');
+  </script>
+  <!-- End Google Tag Manager -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --ink: #163f3a;
+            --ink-dark: #10332f;
+            --gold: #b07a24;
+            --cream: #f6f1e8;
+            --mist: #eee9df;
+            --white: #ffffff;
+            --text: #263b37;
+            --muted: #65736f;
+            --border: rgba(22, 63, 58, 0.16);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--cream);
+            color: var(--text);
+            font-family: "Montserrat", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NOTICE BAR */
+
+        .notice {
+            background: var(--ink);
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 11px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        /* HEADER */
+
+        header {
+            background: var(--cream);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav {
+            max-width: 1240px;
+            margin: auto;
+            padding: 24px 28px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-family: "EB Garamond", serif;
+            font-size: 27px;
+            font-weight: 500;
+            letter-spacing: .08em;
+            color: var(--ink);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            transition: opacity .2s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: .6;
+        }
+
+        .nav-cta {
+            border: 1px solid var(--ink);
+            padding: 12px 18px;
+            transition: all .2s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--ink);
+            color: #fff;
+        }
+
+        /* MAIN */
+
+        .book-section {
+            min-height: calc(100vh - 150px);
+            padding: clamp(60px, 8vw, 105px) 24px 90px;
+        }
+
+        .book-wrap {
+            width: min(1180px, 100%);
+            margin: auto;
+        }
+
+        .intro {
+            max-width: 720px;
+            margin: 0 auto 48px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            margin-bottom: 16px;
+
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin-bottom: 18px;
+
+            color: var(--ink);
+            font-family: "EB Garamond", serif;
+            font-size: clamp(48px, 7vw, 76px);
+            font-weight: 400;
+            line-height: .98;
+        }
+
+        .intro p {
+            max-width: 620px;
+            margin: auto;
+
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* CALENDLY BOX */
+
+        .calendly-shell {
+            background: var(--white);
+            border: 1px solid var(--border);
+
+            box-shadow:
+                0 20px 60px rgba(16, 51, 47, .08);
+
+            overflow: hidden;
+        }
+
+        .calendly-header {
+            padding: 24px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .calendly-header h2 {
+            color: var(--ink);
+            font-family: "EB Garamond", serif;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .calendly-header span {
+            color: var(--muted);
+            font-size: 11px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .calendly-inline-widget {
+            min-width: 320px;
+            height: 720px;
+        }
+
+        /* SUPPORT TEXT */
+
+        .after-call {
+            padding-top: 38px;
+            text-align: center;
+        }
+
+        .after-call p {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .after-call a {
+            color: var(--ink);
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: var(--ink-dark);
+            color: #fff;
+            padding: 55px 24px 30px;
+        }
+
+        .footer-wrap {
+            width: min(1180px, 100%);
+            margin: auto;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            padding-bottom: 45px;
+        }
+
+        .footer-brand {
+            max-width: 360px;
+        }
+
+        .footer-brand h3 {
+            margin-bottom: 12px;
+
+            font-family: "EB Garamond", serif;
+            font-size: 30px;
+            font-weight: 400;
+            letter-spacing: .05em;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, .7);
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 50px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-column strong {
+            margin-bottom: 4px;
+
+            color: #fff;
+            font-size: 10px;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        .footer-column a {
+            color: rgba(255, 255, 255, .7);
+            font-size: 12px;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, .14);
+
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            color: rgba(255, 255, 255, .5);
+            font-size: 10px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav {
+                padding: 20px;
+            }
+
+            .nav-links {
+                gap: 14px;
+            }
+
+            .nav-links a:not(.nav-cta) {
+                display: none;
+            }
+
+            .book-section {
+                padding-top: 55px;
+            }
+
+            .calendly-header {
+                padding: 20px;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .calendly-inline-widget {
+                height: 700px;
+            }
+
+            .footer-top {
+                flex-direction: column;
+            }
+
+            .footer-links {
+                gap: 35px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            h1 {
+                font-size: 52px;
+            }
+
+            .intro p {
+                font-size: 14px;
+            }
+
+            .calendly-inline-widget {
+                height: 720px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+ <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-WR4KVQP7"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+    <!-- NOTICE -->
+    <div class="notice">
+        Diwali gifting made thoughtful · Curated for teams, clients & partners
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="nav">
+
+            <a href="/" class="logo">
+                INARA RITUALS
+            </a>
+
+            <div class="nav-links">
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a href="/#collections">
+                    Collections
+                </a>
+
+                <a href="/#about">
+                    About
+                </a>
+
+                <a href="/#contact">
+                    Contact
+                </a>
+
+                <a href="/book-a-call/" class="nav-cta">
+                    Book a Call
+                </a>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- BOOK A CALL -->
+    <main>
+
+        <section class="book-section">
+
+            <div class="book-wrap">
+
+                <div class="intro">
+
+                    <div class="eyebrow">
+                        Let's create something thoughtful
+                    </div>
+
+                    <h1>
+                        Book a call.
+                    </h1>
+
+                    <p>
+                        Tell us what you're planning, who you're gifting,
+                        and what you'd like the experience to feel like.
+                        We'll help you create a thoughtful gifting experience
+                        for your clients, teams, and partners.
+                    </p>
+
+                </div>
+
+
+                <!-- CALENDLY -->
+
+                <div class="calendly-shell">
+
+                    <div class="calendly-header">
+
+                        <h2>
+                            Choose a time that works for you
+                        </h2>
+
+                        <span>
+                            20–30 minute consultation
+                        </span>
+
+                    </div>
+
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/inquiries-inararituals/30min"
+                        style="min-width:320px;height:700px;">
+                    </div>
+
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async>
+                    </script>
+                    <!-- Calendly inline widget end -->
+                </div>
+
+
+                <div class="after-call">
+
+                    <p>
+                        Prefer to speak over WhatsApp?
+                        <a href="https://wa.me/YOURNUMBER" target="_blank">
+                            Start a conversation →
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-wrap">
+
+            <div class="footer-top">
+
+                <div class="footer-brand">
+
+                    <h3>
+                        INARA RITUALS
+                    </h3>
+
+                    <p>
+                        Thoughtful corporate gifting, curated with intention
+                        and designed to leave a lasting impression.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <div class="footer-column">
+
+                        <strong>Explore</strong>
+
+                        <a href="/">
+                            Home
+                        </a>
+
+                        <a href="/#collections">
+                            Collections
+                        </a>
+
+                        <a href="/#about">
+                            About
+                        </a>
+
+                    </div>
+
+
+                    <div class="footer-column">
+
+                        <strong>Connect</strong>
+
+                        <a href="/#contact">
+                            Contact
+                        </a>
+
+                        <a href="/book-a-call/">
+                            Book a Call
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Inara Rituals. All rights reserved.
+                </span>
+
+                <span>
+                    Crafted with intention.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- CALENDLY SCRIPT -->
+
+    <script src="https://assets.calendly.com/assets/external/widget.js" async>
+    </script>
+
+</body>
+
+</html>
