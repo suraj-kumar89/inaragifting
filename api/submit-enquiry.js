@@ -64,8 +64,11 @@ module.exports = async function handler(req, res) {
     // SEND DATA TO HUBSPOT
     // -----------------------------------------
 
-    const hubspotResponse = await fetch(
-      "https://api.hsforms.com/submissions/v3/integration/submit/247389613/73054849-9223-4171-bd91-dfa3fd69bafc",
+  const portalId = process.env.HUBSPOT_PORTAL_ID;
+const formId = process.env.HUBSPOT_FORM_ID;
+
+const hubspotResponse = await fetch(
+  `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`,
       {
         method: "POST",
 
