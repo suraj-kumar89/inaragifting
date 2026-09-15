@@ -257,12 +257,12 @@ module.exports = async function handler(req, res) {
 
 
     // =========================================
-    // REDIRECT TO BOOK A CALL
+    // REDIRECT TO thank_you PAGE
     // =========================================
 
     return res.redirect(
       303,
-      "/book-a-call"
+      "/thank_you"
     );
 
 

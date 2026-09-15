@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
       // Redirect to booking page
-      window.location.href = "/book-a-call";
+      window.location.href = "/thank_you";
 
     }
 
