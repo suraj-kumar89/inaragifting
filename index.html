@@ -65,8 +65,16 @@
       <h1 class="rise">The Diwali gift nobody else is sending.</h1>
       <p class="hero-lede rise d2">Everyone will receive sweets, dry fruits and another desk clock. You can send something that fills a room, gets used every evening, and is still remembered in January.</p>
       <div class="hero-cta rise d3">
-        <a class="btn" href="#start">Get a quote</a>
-        <a class="btn btn-line" href="https://calendly.com/YOUR-LINK" rel="noopener">Book a 30 minute call</a>
+        <button
+  type="button"
+  class="btn"
+  id="openQuoteModal"
+>
+  Get a quote
+</button>
+        <a class="btn btn-line" href="/book-a-call">
+  Book a 30 minute call
+</a>
         <a class="btn btn-line" href="https://wa.me/919810979086" rel="noopener">WhatsApp us</a>
       </div>
       <p class="hero-meta rise d3">Hand made in our Delhi atelier. Your branding on every box. From 100 boxes upward.</p>
@@ -480,12 +488,13 @@
           Fill the form and we come back with a quote and a sample plan.
         </p>
 
-        <a
-          class="btn btn-line"
-          href="#brief"
-        >
-          Use the form
-        </a>
+        <button
+  type="button"
+  class="btn btn-line"
+  id="openQuoteModalFromBrief"
+>
+  Use the form
+</button>
       </div>
 
     </div>
@@ -614,10 +623,179 @@
 
 <div class="bar">
   <a class="a1" href="https://wa.me/919810979086" rel="noopener">WhatsApp</a>
-  <a class="a2" href="https://calendly.com/YOUR-LINK" rel="noopener">Book a call</a>
-  <a class="a3" href="#brief">Get a quote</a>
+  <a
+  class="a2"
+  href="/book-a-call"
+>
+  Book a call
+</a>
+  <a
+  class="a3"
+  href="#"
+  id="openQuoteModalBottom"
+>
+  Get a quote
+</a>
 </div>
+<!-- =========================================
+     QUOTE FORM MODAL
+========================================= -->
 
+<div
+  class="quote-modal"
+  id="quoteModal"
+  aria-hidden="true"
+>
+
+  <div
+    class="quote-modal-overlay"
+    id="quoteModalOverlay"
+  ></div>
+
+
+  <div
+    class="quote-modal-box"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="quoteModalTitle"
+  >
+
+    <button
+      type="button"
+      class="quote-modal-close"
+      id="closeQuoteModal"
+      aria-label="Close enquiry form"
+    >
+      ×
+    </button>
+
+
+    <div class="quote-modal-head">
+
+      <p class="quote-modal-eyebrow">
+        CORPORATE DIWALI GIFTING
+      </p>
+
+      <h2 id="quoteModalTitle">
+        Get a quote
+      </h2>
+
+      <p>
+        Tell us what you need and we'll come back with
+        a suitable gifting recommendation and quote.
+      </p>
+
+    </div>
+
+
+   <form id="quoteBrief">
+
+  <div class="field">
+    <label for="quoteName">Your name</label>
+    <input
+      id="quoteName"
+      name="firstname"
+      type="text"
+      autocomplete="name"
+      required
+    >
+  </div>
+
+  <div class="field">
+    <label for="quoteCompany">Company</label>
+    <input
+      id="quoteCompany"
+      name="company"
+      type="text"
+      autocomplete="organization"
+      required
+    >
+  </div>
+
+  <div class="field">
+    <label for="quoteEmail">Work email</label>
+    <input
+      id="quoteEmail"
+      name="email"
+      type="email"
+      autocomplete="email"
+      required
+    >
+  </div>
+
+  <div class="field">
+    <label for="quotePhone">Phone</label>
+    <input
+      id="quotePhone"
+      name="phone"
+      type="tel"
+      autocomplete="tel"
+      required
+    >
+  </div>
+
+  <div class="field">
+    <label for="quoteQuantity">Quantity</label>
+    <select
+      id="quoteQuantity"
+      name="corporate_gift_quantity"
+      required
+    >
+      <option value="">Select</option>
+      <option value="Under 100 boxes">Under 100 boxes</option>
+      <option value="100 to 250 boxes">100 to 250 boxes</option>
+      <option value="250 to 500 boxes">250 to 500 boxes</option>
+      <option value="500 to 1,000 boxes">500 to 1,000 boxes</option>
+      <option value="Over 1,000 boxes">Over 1,000 boxes</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="quoteCity">Delivery city</label>
+    <input
+      id="quoteCity"
+      name="delivery_city"
+      type="text"
+      autocomplete="address-level2"
+      required
+    >
+  </div>
+
+  <div class="field full">
+    <label for="quoteDate">Date you need delivery</label>
+    <input
+      id="quoteDate"
+      name="required_delivery_date"
+      type="date"
+      required
+    >
+  </div>
+
+  <div class="field full">
+    <label for="quoteNotes">Anything else we should know</label>
+    <textarea
+      id="quoteNotes"
+      name="additional_requirements"
+      rows="3"
+    ></textarea>
+  </div>
+
+  <input
+    type="submit"
+    class="btn btn-pink quote-submit"
+    value="Send enquiry"
+  >
+
+  <p class="form-note">
+    We reply within one working day.
+    Your details are not shared.
+  </p>
+
+</form>
+
+  </div>
+
+</div>
 <script src="script.js"></script>
 
 </body>

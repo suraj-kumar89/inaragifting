@@ -702,3 +702,322 @@ form .btn{grid-column:1/-1;justify-self:start;}
     width: 100%;
   }
 }
+
+/* =========================================
+   QUOTE FORM MODAL
+========================================= */
+
+.quote-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.25rem;
+
+  visibility: hidden;
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+
+.quote-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Dark background */
+
+.quote-modal-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(20, 71, 82, 0.78);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+
+/* Modal */
+
+.quote-modal-box {
+  position: relative;
+  z-index: 2;
+
+  width: min(760px, 100%);
+  max-height: calc(100vh - 2.5rem);
+
+  overflow-y: auto;
+
+  background: var(--paper);
+
+  border: 1px solid var(--line);
+
+  padding: clamp(1.5rem, 4vw, 3rem);
+
+  box-shadow: 0 30px 80px rgba(20, 71, 82, 0.28);
+
+  transform: translateY(20px) scale(0.98);
+
+  transition: transform 0.25s ease;
+}
+
+
+.quote-modal.is-open .quote-modal-box {
+  transform: translateY(0) scale(1);
+}
+
+
+/* Close button */
+
+.quote-modal-close {
+  position: absolute;
+
+  top: 1rem;
+  right: 1rem;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid var(--line);
+
+  background: var(--plate);
+
+  color: var(--teal-deep);
+
+  font-family: var(--sans);
+
+  font-size: 1.6rem;
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.quote-modal-close:hover {
+  background: var(--teal-deep);
+  color: var(--paper);
+}
+
+
+/* Heading */
+
+.quote-modal-head {
+  max-width: 600px;
+
+  margin-bottom: 2rem;
+
+  padding-right: 3rem;
+}
+
+
+.quote-modal-eyebrow {
+  margin: 0 0 0.55rem;
+
+  color: var(--brass);
+
+  font-family: var(--sans);
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+
+.quote-modal-head h2 {
+  margin: 0 0 0.7rem;
+
+  color: var(--teal-deep);
+
+  font-family: var(--serif);
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+}
+
+
+.quote-modal-head p:last-child {
+  margin: 0;
+
+  color: var(--soft);
+
+  font-family: var(--sans);
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+}
+
+
+/* Form */
+
+#quoteBrief {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 1rem 1.25rem;
+}
+
+
+#quoteBrief .field.full {
+  grid-column: 1 / -1;
+}
+
+
+#quoteBrief .quote-submit {
+  grid-column: 1 / -1;
+
+  justify-self: start;
+
+  border: 0;
+
+  cursor: pointer;
+}
+
+
+/* Prevent page scrolling while modal is open */
+
+body.quote-modal-open {
+  overflow: hidden;
+}
+
+
+/* Mobile */
+
+@media (max-width: 640px) {
+
+  .quote-modal {
+    padding: 0.75rem;
+  }
+
+
+  .quote-modal-box {
+    max-height: calc(100vh - 1.5rem);
+
+    padding: 1.4rem;
+  }
+
+
+  #quoteBrief {
+    grid-template-columns: 1fr;
+  }
+
+
+  #quoteBrief .field.full {
+    grid-column: auto;
+  }
+
+
+  #quoteBrief .quote-submit {
+    grid-column: auto;
+
+    width: 100%;
+  }
+
+
+  .quote-modal-head {
+    padding-right: 2.5rem;
+  }
+
+}
+
+/* =========================================
+   QUOTE MODAL - FORM TEXT VISIBILITY FIX
+========================================= */
+
+#quoteBrief .field label {
+  color: var(--soft);
+}
+
+
+#quoteBrief .field input,
+#quoteBrief .field select,
+#quoteBrief .field textarea {
+  color: var(--ink) !important;
+  background: transparent;
+  -webkit-text-fill-color: var(--ink);
+}
+
+
+/* Placeholder text */
+
+#quoteBrief .field input::placeholder,
+#quoteBrief .field textarea::placeholder {
+  color: #8A9492 !important;
+  opacity: 1;
+}
+
+
+/* Select */
+
+#quoteBrief .field select {
+  color: var(--ink) !important;
+}
+
+
+/* Select dropdown options */
+
+#quoteBrief .field select option {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+
+/* Date input */
+
+#quoteBrief .field input[type="date"] {
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink);
+}
+
+
+/* Make the calendar icon visible */
+
+#quoteBrief .field input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+/* Textarea */
+
+#quoteBrief .field textarea {
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink);
+}
+
+
+/* When input is focused */
+
+#quoteBrief .field input:focus,
+#quoteBrief .field select:focus,
+#quoteBrief .field textarea:focus {
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink);
+}
